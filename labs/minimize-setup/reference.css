@@ -1,0 +1,7 @@
+.todo-list .clear-list {
+	display: none;
+}
+
+.todo-list.has-items .clear-list {
+	display: block;
+}

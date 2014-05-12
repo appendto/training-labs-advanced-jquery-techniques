@@ -1,0 +1,141 @@
+<!doctype html>
+<!--[if lt IE 7]>  <html lang="en" class="ie ie6 lte9 lte8 lte7"> <![endif]-->
+<!--[if IE 7]>     <html lang="en" class="ie ie7 lte9 lte8 lte7"> <![endif]-->
+<!--[if IE 8]>     <html lang="en" class="ie ie8 lte9 lte8"> <![endif]-->
+<!--[if IE 9]>     <html lang="en" class="ie ie9 lte9"> <![endif]-->
+<!--[if gt IE 9]>  <html lang="en"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>Minimize Setup Lab</title>
+	<style>
+		body {
+			background-color: #eee;
+			font-family: arial, sans-serif;
+		}
+
+		h2 {
+			margin-top: 0;
+			padding-top: 0;
+		}
+
+		.delete {
+			font-weight: bold;
+			font-size: 0.8em;
+			position: relative;
+			top: -2px;
+			margin-left: 5px;
+		}
+
+		.delete:hover {
+			color: red;
+			cursor: pointer;
+		}
+
+		.todo-list {
+			width: 300px;
+			margin: 50px auto;
+			background: #fff;
+			padding: 20px;
+		}
+
+		.todo-list input[type=text] {
+			width: 200px;
+		}
+
+		.todo-list input[type=submit] {
+			border: solid 1px #aaa;
+			background: #ccc;
+			padding: 4px 8px;
+		}
+
+		.todo-list ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			border-top: solid 1px #ccc;
+			margin-top: 10px;
+		}
+
+		.todo-list li {
+			padding: 7px;
+			border-bottom: solid 1px #ccc;
+		}
+
+		.todo-list .total {
+			padding: 7px 7px 0;
+			text-align: center;
+			color: #888;
+		}
+
+		input[type=text] {
+			outline: none;
+			border: solid 1px #aaa;
+			padding: 4px;
+		}
+
+		.focus { border: solid 1px blue !important; }
+	</style>
+</head>
+<body>
+	<div class="todo-list">
+		<h2>Shopping</h2>
+		<form action=".">
+			<input type="text" value="" placeholder="New todo" />
+			<input type="submit" value="Add" />
+		</form>
+		<ul>
+		</ul>
+		<div class="total">
+			Total Items: <span class="count">0</span>
+		</div>
+		<div class="actions">
+			<button class="clear-list">Clear List</button>
+		</div>
+	</div>
+
+	<div class="todo-list">
+		<h2>Household</h2>
+		<form action=".">
+			<input type="text" value="" placeholder="New todo" />
+			<input type="submit" value="Add" />
+		</form>
+		<ul>
+		</ul>
+		<div class="total">
+			Total Items: <span class="count">0</span>
+		</div>
+		<div class="actions">
+			<button class="clear-list">Clear List</button>
+		</div>
+	</div>
+
+	<div class="todo-list">
+		<h2>Work</h2>
+		<form action=".">
+			<input type="text" value="" placeholder="New todo" />
+			<input type="submit" value="Add" />
+		</form>
+		<ul>
+		</ul>
+		<div class="total">
+			Total Items: <span class="count">0</span>
+		</div>
+		<div class="actions">
+			<button class="clear-list">Clear List</button>
+		</div>
+	</div>
+
+	<script src="libs/jquery-1.9.1.js"></script>
+	<script src="./jquery.todolist.js"></script>
+	<script src="./lab.js"></script>
+	<script>
+		var key;
+		for ( key in window.lesson.minimizeSetup ) {
+			if ( key !== "exercise_2" && key !== "exercise_3" ) {
+				window.lesson.minimizeSetup[ key ]();
+			}
+		}
+	</script>
+</body>
+</html>
