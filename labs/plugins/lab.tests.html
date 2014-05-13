@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>QUnit Core Test Suite</title>
+  <link rel="stylesheet" href="../../libs/jquery-qunit/qunit-1.14.0.css" type="text/css" media="screen">
+</head>
+<body>
+  <h1 id="qunit-header">QUnit Selections Test Suite</h1>
+  <h2 id="qunit-banner"></h2>
+  <div id="qunit-testrunner-toolbar"></div>
+  <h2 id="qunit-userAgent"></h2>
+  <ol id="qunit-tests"></ol>
+  <div id="qunit-fixture">
+  <!-- QUNIT FIXTURE -->
+    <div class="todo-list">
+      <form action=".">
+        <input type="text" value="" placeholder="New todo" />
+        <input type="submit" value="Add" />
+      </form>
+      <ul>
+        <li>Learn about Event Delegation <span class="delete">[X]</span></li>
+        <li>Complete a new task <span class="delete">[X]</span></li>
+      </ul>
+      <div class="total">
+        Total Items: <span class="count">2</span>
+      </div>
+    </div>
+  <!-- /QUNIT FIXTURE -->
+  </div>
+
+  <script src="../../libs/jquery-2.1.1.js"></script>
+  <script src="../../libs/jquery-qunit/qunit-1.14.0.js"></script>
+  <script src="./lab.js"></script>
+  <script src="./lab.tests.js"></script>
+</body>
+</html>

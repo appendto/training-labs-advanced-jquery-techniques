@@ -7,17 +7,13 @@
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head>
 	<meta charset="utf-8">
-	<title>Minimize Setup Lab</title>
+	<title>Events and Traversal Lab</title>
 	<style>
 		body {
 			background-color: #eee;
 			font-family: arial, sans-serif;
 		}
 
-		h2 {
-			margin-top: 0;
-			padding-top: 0;
-		}
 
 		.delete {
 			font-weight: bold;
@@ -79,62 +75,25 @@
 </head>
 <body>
 	<div class="todo-list">
-		<h2>Shopping</h2>
 		<form action=".">
 			<input type="text" value="" placeholder="New todo" />
 			<input type="submit" value="Add" />
 		</form>
 		<ul>
+			<li>Learn about Event Delegation <span class="delete">[X]</span></li>
+			<li>Complete a new task <span class="delete">[X]</span></li>
 		</ul>
 		<div class="total">
-			Total Items: <span class="count">0</span>
-		</div>
-		<div class="actions">
-			<button class="clear-list">Clear List</button>
+			Total Items: <span class="count">2</span>
 		</div>
 	</div>
 
-	<div class="todo-list">
-		<h2>Household</h2>
-		<form action=".">
-			<input type="text" value="" placeholder="New todo" />
-			<input type="submit" value="Add" />
-		</form>
-		<ul>
-		</ul>
-		<div class="total">
-			Total Items: <span class="count">0</span>
-		</div>
-		<div class="actions">
-			<button class="clear-list">Clear List</button>
-		</div>
-	</div>
-
-	<div class="todo-list">
-		<h2>Work</h2>
-		<form action=".">
-			<input type="text" value="" placeholder="New todo" />
-			<input type="submit" value="Add" />
-		</form>
-		<ul>
-		</ul>
-		<div class="total">
-			Total Items: <span class="count">0</span>
-		</div>
-		<div class="actions">
-			<button class="clear-list">Clear List</button>
-		</div>
-	</div>
-
-	<script src="../../libs/jquery-2.1.1.js"></script>
-	<script src="./jquery.todolist.js"></script>
+	<script src="libs/jquery-1.9.1.js"></script>
 	<script src="./lab.js"></script>
 	<script>
 		var key;
-		for ( key in window.lesson.minimizeSetup ) {
-			if ( key !== "exercise_2" && key !== "exercise_3" ) {
-				window.lesson.minimizeSetup[ key ]();
-			}
+		for ( key in window.lesson.eventsTraversal ) {
+			window.lesson.eventsTraversal[ key ]();
 		}
 	</script>
 </body>

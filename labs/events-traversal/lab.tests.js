@@ -13,14 +13,20 @@ var _reset = function () {
 };
 
 test( "Exercise 0: Add `sample` class to HTML element", function () {
+
+	expect( 2 );
+
 	var html = $( "html" );
 	ok( !html.hasClass( "sample" ), "Should not have sample class to start" );
 	lesson.eventsTraversal.exercise_0();
-	ok( html.hasClass( "sample" ), "Should not have sample class to start" );
+	ok( html.hasClass( "sample" ), "HTML tag should have `sample` class." );
 });
 
 test( "Exercise 1: Clicking on delete should remove an item", function() {
 	_reset();
+
+	expect( 5 );
+
 	var list =  $( ".todo-list" );
 	var evtFired = false;
 	$( "ul" ).on( "itemremoved", function () {
@@ -67,6 +73,7 @@ test( "Exercise 1: Clicking on delete should remove an item", function() {
 test( "Exercise 2: The input should gain/lose a class when it gains/loses focus", function() {
 	_reset();
 
+	expect( 4 );
 	var input =  $( "input[type=text]" );
 	var submit =  $( "input[type=submit]" );
 
@@ -89,6 +96,8 @@ test( "Exercise 2: The input should gain/lose a class when it gains/loses focus"
 
 test( "Exercise 3: Add a new item when the form is submitted", function () {
 	_reset();
+
+	expect( 7 );
 
 	var form = $( "form" ).off();
 	var evtFired = false;
@@ -133,6 +142,9 @@ test( "Exercise 3: Add a new item when the form is submitted", function () {
 
 test( "Exercise 4: Handle itemadded and itemremoved events", function () {
 	_reset();
+
+	expect( 3 );
+
 	var count = $( ".count" );
 
 	equal( count.text(), "2", "Count should be 2 to start" );
@@ -150,6 +162,9 @@ test( "Exercise 4: Handle itemadded and itemremoved events", function () {
 });
 
 test( "Exercise 5: build a custom filter that tests for the word Event", function () {
+
+	expect( 1 );
+
 	var callback = lesson.eventsTraversal.exercise_5();
 
 
